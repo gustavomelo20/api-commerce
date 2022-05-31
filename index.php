@@ -18,4 +18,14 @@ $app->get('/', function (Request $request, Response $response, $args) {
          ->withStatus(200);
 });
 
+$app->get('/demmand', function (Request $request, Response $response, $args) {
+   
+
+    $response->getBody()->write(json_encode('demmand'));
+    return $response
+         ->withHeader('Content-type', 'application/json')
+         ->withStatus(200);
+});
+
+
 $app->run();
